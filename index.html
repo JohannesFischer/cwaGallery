@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Photobox</title>
+    <link rel="stylesheet" type="text/css" href="cwaGallery.css" />
+    <script type="text/javascript" src="../js/mootools.js"></script>
+    <script type="text/javascript" src="cwaGallery.js"></script>
+	<script type="text/javascript">
+		window.addEvent('domready', function(){
+			if($$('.cwaGallery')[0])
+			{
+				new cwaGallery($$('.cwaGallery')[0]);
+			}
+		});
+	</script>
+</head>
+<body>
+    
+    <div class="cwaGallery">
+        <div class="images">
+            <img src="images/1.jpg" title="Besondere Exemplare unter den festbrennweitigen Standardobjektiven sind die mit hoher Lichtstärke" />
+            <img src="images/2.jpg" title="Bildberschreibung Nr. 2" />
+            <img src="images/3.jpg" title="Bildberschreibung Nr. 3" />
+            <img src="images/4.jpg" title="Bildberschreibung Nr. 4" />
+			<img src="images/5.jpg" title="Bildberschreibung Nr. 4" />
+        </div>
+    </div>
+    
+</body>
+</html>

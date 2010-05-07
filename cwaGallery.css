@@ -1,0 +1,64 @@
+.cwaGallery {
+    border: 1px solid #454545;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    margin: 15px auto;
+    position: relative;
+    width: 400px;
+    }
+    .cwaGallery-navigation {
+        background: #000;
+        background: rgba(0, 0, 0, .7);
+        color: #fff;
+        height: 22px;
+        left: 0;
+        line-height: 22px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        z-index: 10;
+        }
+        .cwaGallery-image-count {
+        }
+        .cwaGallery-prev,
+        .cwaGallery-next {
+            display: block;
+            height: 16px;
+            margin-top: 3px;
+            width: 16px;
+        }
+        .cwaGallery-prev {
+            background: url(cwaGallery_arrow.gif) no-repeat right top;
+            float: left;
+            margin-left: 2px;
+        }
+        .cwaGallery-next {
+            background: url(cwaGallery_arrow.gif) no-repeat left top;
+            float: right;
+            margin-right: 2px;
+        }    
+    .cwaGallery .images {
+        background: #fff none;
+        height: 300px;
+        position: relative;
+        overflow: hidden;
+        z-index: 0;
+        }
+        .cwaGallery .images img {
+            display: block;
+        }
+    .cwaGallery-caption {
+        background: #000;
+        background: rgba(0, 0, 0, .7);
+        bottom: 0;
+        color: #fff;
+        height: auto;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        }
+        .cwaGallery-caption span {
+            display: block;
+            margin: 4px 8px;
+        }
