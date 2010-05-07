@@ -46,7 +46,9 @@
         z-index: 0;
         }
         .cwaGallery .images img {
+            border: none;
             display: block;
+            padding: 0;
         }
     .cwaGallery-caption {
         background: #000;
