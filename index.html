@@ -2,18 +2,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>Photobox</title>
+    <title>cwaGallery :: Demo</title>
     <link rel="stylesheet" type="text/css" href="cwaGallery.css" />
     <script type="text/javascript" src="../js/mootools.js"></script>
     <script type="text/javascript" src="cwaGallery.js"></script>
 	<script type="text/javascript">
 		window.addEvent('domready', function(){
-			if($$('.cwaGallery')[0])
-			{
-				new cwaGallery($$('.cwaGallery')[0], {
-					enableKeyControls: true	
-				});
-			}
+			new cwaGallery($$('.cwaGallery')[0], {
+				enableKeyControls: true	
+			});
 		});
 	</script>
 	<style type="text/css">
@@ -32,10 +29,10 @@
     
     <div class="cwaGallery">
         <div class="images">
-            <img src="images/1.jpg" alt="" longdesc="Besondere Exemplare unter den festbrennweitigen Standardobjektiven sind die mit hoher Lichtstärke" />
-            <img src="images/2.jpg" alt="" longdesc="Bildberschreibung Nr. 2" />
+            <img src="images/1.jpg" alt="" longdesc="Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen." />
+            <img src="images/2.jpg" alt="" longdesc="" />
             <img src="images/3.jpg" alt="" longdesc="" />
-            <img src="images/4.jpg" alt="" longdesc="Bildberschreibung Nr. 4" />
+            <img src="images/4.jpg" alt="" longdesc="Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den s&uuml;&szlig;en Fr&uuml;hlingsmorgen, die ich mit ganzem Herzen genie&szlig;e." />
 			<img src="images/5.jpg" alt="" longdesc="" />
         </div>
     </div>

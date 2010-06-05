@@ -3,6 +3,7 @@ var cwaGallery = new Class({
 	Implements: Options,
 
 	options: {
+		centerImages: true,
 		enableKeyControls: false	
 	},
 
@@ -21,11 +22,10 @@ var cwaGallery = new Class({
 
 		this.build();
 
-        this.images.each(function(img){
-			img.addEvent('load', function() {
-				this.center(img);
-			}.bind(this));
-        }, this);
+		if(this.options.centerImages)
+		{
+			this.centerImages();
+		}
     },
     
     build: function()
@@ -123,18 +123,22 @@ var cwaGallery = new Class({
         this.navigation.getElement('span').set('text', (this.currentImage+1)+' / '+(this.imageCount));
     },
     
-    center: function(img)
+    centerImages: function()
     {
-        var dim = img.getSize();
+		this.images.each(function(img){
+			img.addEvent('load', function() {
+				var dim = img.getSize();
 
-        if(dim.x > 0 && dim.x < this.availSpace.x)
-        {
-            img.setStyle('margin-left', ((this.availSpace.x - dim.x)/2).round());
-        }
-        if(dim.y > 0 && dim.y < this.availSpace.y)
-        {
-            img.setStyle('margin-top', ((this.availSpace.y - dim.y)/2).round());
-        }
+				if(dim.x < this.availSpace.x)
+				{
+					img.setStyle('margin-left', ((this.availSpace.x - dim.x)/2).round());
+				}
+				if(dim.y < this.availSpace.y)
+				{
+					img.setStyle('margin-top', ((this.availSpace.y - dim.y)/2).round());
+				}
+			}.bind(this));
+        }, this);        
     },
     
     prev: function()
