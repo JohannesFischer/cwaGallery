@@ -22,7 +22,9 @@ var cwaGallery = new Class({
 		this.build();
 
         this.images.each(function(img){
-            this.center(img);
+			img.addEvent('load', function() {
+				this.center(img);
+			}.bind(this));
         }, this);
     },
     
