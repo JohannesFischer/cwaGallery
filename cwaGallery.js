@@ -1,7 +1,15 @@
 var cwaGallery = new Class({
 
-    initialize: function(container)
+	Implements: Options,
+
+	options: {
+		enableKeyControls: false	
+	},
+
+    initialize: function(container, options)
     {
+		this.setOptions(options);
+
         this.container = $(container);
         
         this.availSpace = this.container.getElement('.images').getSize();
@@ -68,6 +76,22 @@ var cwaGallery = new Class({
 
         this.setCaption();
 		this.setCount();
+		
+		if(this.options.enableKeyControls)
+		{
+			window.addEvents({
+				'keydown': function(e){
+					if(e.key == 'left')
+					{
+						this.prev();
+					}
+					else if(e.key == 'right')
+					{
+						this.next();
+					}
+				}.bind(this)
+			});	
+		}
     },
     
 	animateCaption: function()
@@ -77,7 +101,7 @@ var cwaGallery = new Class({
 		fx.start({
 			bottom: this.caption.getHeight()*-1
 		}).chain(function(){
-			if(this.images[this.currentImage].title != '')
+			if(this.images[this.currentImage].get('longdesc'))
 			{
 				this.setCaption();
 				fx.start({
@@ -89,7 +113,7 @@ var cwaGallery = new Class({
 	
     setCaption: function()
     {
-		this.caption.getElement('span').set('text', this.images[this.currentImage].title);
+		this.caption.getElement('span').set('text', this.images[this.currentImage].get('longdesc'));
     },
     
     setCount: function()

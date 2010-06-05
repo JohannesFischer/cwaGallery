@@ -10,7 +10,9 @@
 		window.addEvent('domready', function(){
 			if($$('.cwaGallery')[0])
 			{
-				new cwaGallery($$('.cwaGallery')[0]);
+				new cwaGallery($$('.cwaGallery')[0], {
+					enableKeyControls: true	
+				});
 			}
 		});
 	</script>
@@ -19,11 +21,11 @@
     
     <div class="cwaGallery">
         <div class="images">
-            <img src="images/1.jpg" title="Besondere Exemplare unter den festbrennweitigen Standardobjektiven sind die mit hoher Lichtstärke" />
-            <img src="images/2.jpg" title="Bildberschreibung Nr. 2" />
-            <img src="images/3.jpg" title="Bildberschreibung Nr. 3" />
-            <img src="images/4.jpg" title="Bildberschreibung Nr. 4" />
-			<img src="images/5.jpg" title="Bildberschreibung Nr. 4" />
+            <img src="images/1.jpg" alt="" longdesc="Besondere Exemplare unter den festbrennweitigen Standardobjektiven sind die mit hoher Lichtstärke" />
+            <img src="images/2.jpg" alt="" longdesc="Bildberschreibung Nr. 2" />
+            <img src="images/3.jpg" alt="" longdesc="" />
+            <img src="images/4.jpg" alt="" longdesc="Bildberschreibung Nr. 4" />
+			<img src="images/5.jpg" alt="" longdesc="" />
         </div>
     </div>
     
